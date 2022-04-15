@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <!-- SIDEBAR -->
+      <aside>
+        <div class="sidebarWrapper">
+          <div class="logo-div">
+            <i class="fa-solid fa-terminal logo"></i>
+            <p class="logo-title">CODING CAMP</p>
+            <p class="admin">ADMIN DASHBOARD</p>
+          </div>
+          <div class="sidebarMenu">
+            <h3 class="sidebarTitle">Add/Edit</h3>
+            <ul class="sidebarList">
+              <li class="sidebarListItem add-courses-btn">
+                <i class="fa-solid fa-house sidebarIcon"></i>
+                Courses
+              </li>
+              <li class="sidebarListItem add-trainers-btn">
+                <i class="fa-solid fa-timeline sidebarIcon"></i>
+                Trainers
+              </li>
+              <li class="sidebarListItem add-students-btn">
+                <i class="fa-solid fa-arrow-trend-up sidebarIcon"></i>
+                Students
+              </li>
+              <li class="sidebarListItem add-assignments-btn">
+                <i class="fa-solid fa-arrow-trend-up sidebarIcon"></i>
+                Assignments
+              </li>
+            </ul>
+            <h3 class="sidebarTitle">Courses /</h3>
+            <ul class="sidebarList">
+              <li class="sidebarListItem edit-coursesTrainers-btn">
+                <i class="fa-solid fa-house sidebarIcon"></i>
+                Trainers
+              </li>
+              <li class="sidebarListItem edit-coursesStudents-btn">
+                <i class="fa-solid fa-timeline sidebarIcon"></i>
+                Students
+              </li>
+              <li class="sidebarListItem edit-coursesAssignments-btn">
+                <i class="fa-solid fa-arrow-trend-up sidebarIcon"></i>
+                Assignments
+              </li>
+            </ul>
+            <h3 class="sidebarTitle">Courses / Students</h3>
+            <ul class="sidebarList">
+              <li class="sidebarListItem edit-CSA-btn">
+                <i class="fa-solid fa-house sidebarIcon"></i>
+                Assignments
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <!-- MAIN PAGE -->
+      <div class="mainPage">
+        <div class="topMain">
+          <div class="topLeft"></div>
+          <div class="topRight">
+            <img src="./img/avatar.png" alt="user's profile picture" />
+            <div class="userDetails">
+              <p class="username">Nick Paschalis</p>
+              <p class="position">paschalis.nick@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <!-- ADD/EDIT Courses Page -->
+        <section id="courses-page">
+          <div>
+            <form id="coursesForm">
+              <h2 class="form-title">Add new course</h2>
+              <label for="courseTitle">Title:</label>
+              <input type="text" name="courseTitle" id="courseTitle" />
+              <small>Error Message</small>
+              <label for="stream">Stream:</label>
+              <input type="text" name="stream" id="stream" />
+              <small>Error Message</small>
+              <label for="type">Type:</label>
+              <input type="text" name="type" id="type" />
+              <small>Error Message</small>
+              <label for="startDate">Start date:</label>
+              <input
+                type="date"
+                name="startDate"
+                id="startDate"
+                min="2021-01-01"
+              />
+              <small>Error Message</small>
+              <label for="endDate">End date:</label>
+              <input type="date" name="endDate" id="endDate" min="2021-01-01" />
+              <small>Error Message</small>
+              <button type="submit" class="submitBtn">Submit</button>
+              <button type="submit" class="updateBtn">Update</button>
+            </form>
+          </div>
+          <div>
+            <h2 class="list-title">Courses list</h2>
+            <div class="courses-list"></div>
+          </div>
+        </section>
+
+        <!-- ADD/EDIT Trainers Page -->
+        <section id="trainers-page">
+          <div>
+            <form id="trainersForm">
+              <h2 class="form-title">Add new trainer</h2>
+              <label for="trainerFirstName">First name:</label>
+              <input
+                type="text"
+                name="trainerFirstName"
+                id="trainerFirstName"
+              />
+              <small>Error Message</small>
+              <label for="trainerLastName">Last name:</label>
+              <input type="text" name="trainerLastName" id="trainerLastName" />
+              <small>Error Message</small>
+              <label for="trainerSubjects">Subjects:</label>
+              <input type="text" name="trainerSubjects" id="trainerSubjects" />
+              <small>Error Message</small>
+              <button type="submit" class="trainersSubmitBtn">Submit</button>
+              <button type="submit" class="trainersUpdateBtn">Update</button>
+            </form>
+          </div>
+          <div>
+            <h2 class="list-title">Trainers list</h2>
+            <div class="trainers-list"></div>
+          </div>
+        </section>
+
+        <!-- ADD/EDIT Students Page -->
+        <section id="students-page">
+          <div>
+            <form id="studentsForm">
+              <h2 class="form-title">Add new student</h2>
+              <label for="studentFirstName">First name:</label>
+              <input
+                type="text"
+                name="studentFirstName"
+                id="studentFirstName"
+              />
+              <small>Error Message</small>
+              <label for="studentLastName">Last name:</label>
+              <input type="text" name="studentLastName" id="studentLastName" />
+              <small>Error Message</small>
+              <label for="studentDateOfBirth">Date of birth:</label>
+              <input
+                type="date"
+                name="studentDateOfBirth"
+                id="studentDateOfBirth"
+              />
+              <small>Error Message</small>
+              <label for="studentTuitionFees">Tuition fees:</label>
+              <input
+                type="number"
+                name="studentTuitionFees"
+                id="studentTuitionFees"
+              />
+              <small>Error Message</small>
+              <button type="submit" class="studentsSubmitBtn">Submit</button>
+              <button type="submit" class="studentsUpdateBtn">Update</button>
+            </form>
+          </div>
+          <div>
+            <h2 class="list-title">Students list</h2>
+            <div class="students-list"></div>
+          </div>
+        </section>
+
+        <!-- ADD/EDIT Assignments Page -->
+        <section id="assignments-page">
+          <div>
+            <form id="assignmentsForm">
+              <h2 class="form-title">Add new assignment</h2>
+              <label for="assignmentTitle">Title:</label>
+              <input type="text" name="assignmentTitle" id="assignmentTitle" />
+              <small>Error Message</small>
+              <label for="assignmentDescription">Description:</label>
+              <textarea
+                name="assignmentDescription"
+                id="assignmentDescription"
+                rows="4"
+              ></textarea>
+              <small>Error Message</small>
+              <label for="assignmentSubDate">Submission date:</label>
+              <input
+                type="date"
+                name="assignmentSubDate"
+                id="assignmentSubDate"
+              />
+              <small>Error Message</small>
+              <label for="assignmentOralMark"
+                >Highest score receivable (ORAL):</label
+              >
+              <input
+                type="number"
+                name="assignmentOralMark"
+                id="assignmentOralMark"
+              />
+              <small>Error Message</small>
+              <label for="assignmentTotalMark"
+                >Highest score receivable (TOTAL):</label
+              >
+              <input
+                type="number"
+                name="assignmentTotalMark"
+                id="assignmentTotalMark"
+              />
+              <small>Error Message</small>
+              <button type="submit" class="assignmentsSubmitBtn">Submit</button>
+              <button type="submit" class="assignmentsUpdateBtn">Update</button>
+            </form>
+          </div>
+          <div>
+            <h2 class="list-title">Assignments list</h2>
+            <div class="assignments-list"></div>
+          </div>
+        </section>
+
+        <!-- Courses / Trainers -->
+        <section id="coursesTrainers-page">
+          <h2>Course:</h2>
+          <select name="courseSelect-tr" id="courseSelect-tr"></select>
+          <div class="coursesTrainersMain">
+            <div class="coursesTrainers-left">
+              <h3>Select Trainer to add:</h3>
+              <div class="trainersRemainingList"></div>
+            </div>
+            <div class="coursesTrainers-right">
+              <h3>Selected Trainers:</h3>
+              <div class="trainersAddedList"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Courses / Students -->
+        <section id="coursesStudents-page">
+          <h2>Course:</h2>
+          <select
+            name="studentsCourseSelect-tr"
+            id="studentsCourseSelect-tr"
+          ></select>
+          <div class="coursesStudentsMain">
+            <div class="coursesStudents-left">
+              <h3>Select Student to add:</h3>
+              <div class="studentsRemainingList"></div>
+            </div>
+            <div class="coursesStudents-right">
+              <h3>Selected Students:</h3>
+              <div class="studentsAddedList"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Courses / Assignments -->
+        <section id="coursesAssignments-page">
+          <h2>Course:</h2>
+          <select
+            name="assignmentsCourseSelect-tr"
+            id="assignmentsCourseSelect-tr"
+          ></select>
+          <div class="coursesAssignmentsMain">
+            <div class="coursesAssignments-left">
+              <h3>Select Assignment to add:</h3>
+              <div class="assignmentsRemainingList"></div>
+            </div>
+            <div class="coursesAssignments-right">
+              <h3>Selected Assignments:</h3>
+              <div class="assignmentsAddedList"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Courses / Students / Assignments -->
+        <section id="csa-page">
+          <div class="csaSelect">
+            <div class="csa-left">
+              <h2>Course:</h2>
+              <select
+                name="coursesCSASelect-tr"
+                id="coursesCSASelect-tr"
+              ></select>
+            </div>
+            <div class="csa-right">
+              <h2>Assignment:</h2>
+              <select
+                name="assignmentsCSASelect-tr"
+                id="assignmentsCSASelect-tr"
+              ></select>
+            </div>
+          </div>
+          <div>
+            <h2 class="list-title">Students list</h2>
+            <div class="csaStudents-listTitle">
+              <span class="first-column">Name</span>
+              <span class="second-column">Oral Mark</span>
+              <span class="third-column">Total Mark</span>
+            </div>
+            <div class="csaStudents-list"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="/js/app.js"></script>
+    <script src="/js/courses.js"></script>
+    <script src="/js/trainers.js"></script>
+    <script src="/js/students.js"></script>
+    <script src="/js/assignments.js"></script>
+    <script src="/js/coursesTrainers.js"></script>
+    <script src="/js/coursesStudents.js"></script>
+    <script src="/js/coursesAssignments.js"></script>
+    <script src="/js/csa.js"></script>
+  </body>
+</html>

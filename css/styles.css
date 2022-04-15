@@ -1,0 +1,385 @@
+/* General */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+i {
+  cursor: pointer;
+}
+
+/* sidebar */
+
+.logo-div {
+  font-weight: 900;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.logo {
+  background: #00008b;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.logo-title {
+  margin-top: 8px;
+  color: #00008b;
+  font-size: 18px;
+  line-height: 0.7;
+}
+
+.admin {
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #8b8b00;
+}
+
+/* forms */
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+textarea {
+  cursor: text;
+  resize: none;
+}
+
+small {
+  margin-top: 2px;
+  display: block;
+  color: #e74c3c;
+  visibility: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.topMain {
+  width: 100%;
+  padding: 0px 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topRight {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.topRight img {
+  height: 35px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.topRight .username {
+  font-weight: bold;
+}
+
+.topRight .position {
+  color: #aaa;
+}
+
+main {
+  display: flex;
+}
+
+main aside {
+  background-color: #f1f1fb;
+  width: 200px;
+  top: 0;
+  left: 0;
+  position: sticky;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 500px) {
+  main aside {
+    background-color: #fff;
+  }
+}
+
+main .mainPage {
+  width: 100%;
+  padding: 30px;
+}
+
+.sidebarWrapper {
+  padding: 20px;
+  color: #555;
+}
+
+.sidebarMenu {
+  margin-bottom: 10px;
+}
+
+.sidebarTitle {
+  font-size: 13px;
+  color: rgb(187, 186, 186);
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 5px;
+}
+
+.sidebarListItem {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.sidebarListItem.active,
+.sidebarListItem:hover {
+  color: darkblue;
+}
+
+.sidebarIcon {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.list-title {
+  margin-top: 25px;
+}
+
+#trainers-page,
+#students-page,
+#assignments-page,
+#coursesTrainers-page,
+#coursesStudents-page,
+#coursesAssignments-page,
+#csa-page {
+  display: none;
+}
+
+h2 {
+  font-size: 28px;
+  color: #00008b;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.form-title {
+  font-weight: 400;
+}
+
+.list-title:after {
+  content: ' ';
+  display: block;
+  width: 5%;
+  border: 5px solid #b2d9ff;
+}
+
+.title {
+  margin-top: 30px;
+}
+
+label {
+  display: block;
+  margin: 5px 0 5px 0;
+}
+
+button {
+  display: block;
+  font-weight: 500;
+  padding: 5px 15px;
+}
+
+input#lessonName {
+  margin-bottom: 16px;
+}
+
+select {
+  padding: 5px;
+}
+
+.submitBtn,
+.updateBtn,
+.trainersSubmitBtn,
+.trainersUpdateBtn,
+.studentsSubmitBtn,
+.studentsUpdateBtn,
+.assignmentsSubmitBtn,
+.assignmentsUpdateBtn {
+  margin-top: 15px;
+  border-radius: 4px;
+  padding: 8px 20px;
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+}
+
+.submitBtn:hover,
+.submitBtn:active,
+.updateBtn:hover,
+.updateBtn:active,
+.trainersSubmitBtn:hover,
+.trainersSubmitBtn:active,
+.trainersUpdateBtn:hover,
+.trainersUpdateBtn:active,
+.studentsSubmitBtn:hover,
+.studentsSubmitBtn:active,
+.studentsUpdateBtn:hover,
+.studentsUpdateBtn:active,
+.assignmentsSubmitBtn:hover,
+.assignmentsSubmitBtn:active,
+.assignmentsUpdateBtn:hover,
+.assignmentsUpdateBtn:active {
+  border: 2px solid #00008b;
+  background-color: #00008b;
+  color: #fff;
+}
+
+.updateBtn,
+.trainersUpdateBtn,
+.studentsUpdateBtn,
+.assignmentsUpdateBtn {
+  display: none;
+}
+
+#lessonListTitle {
+  margin-top: 35px;
+}
+
+.list-item {
+  width: 60%;
+  display: flex;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px #8b8b00 dotted;
+}
+
+.list-item-name {
+  flex: 4;
+}
+
+.list-buttons {
+  text-align: end;
+  flex: 1;
+}
+
+.pencil {
+  margin-right: 2px;
+}
+
+.trash,
+.remove-trainer {
+  color: #e74c3c;
+}
+
+/* Courses/ */
+
+.coursesTrainersMain,
+.coursesStudentsMain,
+.coursesAssignmentsMain {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+}
+
+.csaSelect {
+  display: flex;
+}
+
+.coursesTrainers-left,
+.coursesStudents-left,
+.coursesAssignments-left,
+.csa-left,
+.csa-right {
+  flex: 1;
+}
+
+.coursesTrainers-left h3,
+.coursesStudents-left h3,
+.coursesAssignments-left h3 {
+  color: #8b8b00;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px lightgray solid;
+}
+
+.coursesTrainers-right,
+.coursesStudents-right,
+.coursesAssignments-right {
+  flex: 1;
+  font-weight: bold;
+}
+
+.coursesTrainers-right h3,
+.coursesStudents-right h3,
+.coursesAssignments-right h3 {
+  color: #00008b;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px lightgray solid;
+}
+
+.csa-right h2 {
+  color: #8b8b00;
+}
+
+.subjects {
+  font-size: 14px;
+  color: #888;
+}
+
+.csaStudents-listTitle {
+  width: 60%;
+  padding: 5px 0;
+  margin: 5px 0;
+  border-bottom: 1px solid #000;
+  font-weight: bold;
+}
+
+.first-column {
+  width: 150px;
+  display: inline-block;
+}
+
+.second-column,
+.third-column {
+  width: 50px;
+  display: inline-block;
+}
+
+.oralMark,
+.totalMark {
+  padding: 2px;
+  text-align: end;
+}
+
+.submitMessage {
+  font-size: 12px;
+  margin-left: 10px;
+}
